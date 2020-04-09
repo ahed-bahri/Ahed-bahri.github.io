@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <link rel="shortcut icon" href="img/ticket/Ticket-icon.png">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate/animate.css">
+    <link rel="stylesheet" href="css/ticketStyle.css">
+</head>
+<body>
+    <div class="container Total">
+        <div class="container fils">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img/ticket/FromHere.png" class="img-responsive left-side animated bounceInLeft" alt="Ticket">
+                </div>
+                <div class="col-lg-6">
+                    <div class="container right-side animated flash delay-1s">
+                        <form action="http://localhost/undefeated/ticketGen.php" method="POST">
+                            <h3>Reserve Your Ticket</h3>
+                            <div class="form-group row">
+                                <label for="nom" class=" col-lg-3 col-sm-2 col-form-label"> Nom </label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="nom" name="nom" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="mail" class="col-lg-3 col-sm-2 col-form-label"> Adresse </label>
+                                <div class="col-sm-10">
+                                    <input type="email" id="mail"  name="adresse" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="tel" class=" col-lg-3 col-sm-2 col-form-label"> Telephone </label>
+                                <div class="col-sm-10">
+                                    <input type="number" id="tel"  name="tele" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-10 col-lg-4">
+                                    <button type="submit" class="btn btn-danger">Done</button>
+                                </div>
+                            </div>
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                      <!--Font Awsome-->
+    <script src="https://kit.fontawesome.com/009122852a.js"></script>
+</body>
+</html>

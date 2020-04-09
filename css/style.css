@@ -1,0 +1,1482 @@
+/*====================================
+             AHED BAHRI
+======================================*/
+
+/* Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+/* ====================
+        Generic CSS 
+======================*/
+
+html, body {
+    /* yekhw 100% mta3 browser */
+    height :100%;
+}
+    
+p {
+    /*To use open Sans and if not found fo and use sans-serif */ 
+    font-family : "Open Sans", sans-serif;
+    font-size : 20px;
+    font-weight:400;
+    line-height : 24px;
+}
+    
+section {
+    /* dima white bg f page kol */
+    background: white;
+    overflow:hidden;
+}
+    
+
+/* =====================
+        PreLoader
+=======================*/
+
+#preloader {
+    background-color:white;
+    /*To cover all the web page PS : Fixed is % web  page means fixed even if the page is scrolled*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 9999; /* To always stay on top cuz the value is soo high */
+}
+
+#status {
+    background-image : url("../img/preloader/preloader.gif"); /* arj3 step back bech todkhol lel img */
+    background-repeat: no-repeat;
+    width : 80px;
+    height : 80px;
+    position: absolute; /* bech thot win théb % lbouha */
+    left:50%;
+    top:50%;
+    margin-top: -2%;
+    margin-left: -3%;
+}
+
+
+/* ===============================================================
+        navBar Collapse small devices ( Center the content)
+==================================================================*/
+  
+  .navbar .navbar-collapse {
+    text-align: center;
+    font-size: 50px;
+  }
+
+
+
+/* ==========================
+             HOME
+============================*/
+
+#home {
+    /* cuz in all section we put bg white so we want to keep the video so we do none */
+    background : none;
+    /* yarja video 100% ala section home */
+    height: 100%;
+}
+
+#home-bg-video {
+    /*We don't want the video to move*/
+    position : fixed ;
+    top: 50%;
+    left:50%;
+    /* transform bech tn9s menw 50 ala x w y */
+    transform : translateX(-50%) translateY(-50%);
+   /*Webkit bech tkhaleha tkhdem ala browser kol */
+    -webkit-transform : translateX(-50%) translateY(-50%);   
+    /* To stretch the video on full screen */
+    min-width :100%;
+    min-height :100%; 
+    /* to make sure it is good all the time */
+    width: auto;
+    height: auto;
+    /*to make sure this video always under everything*/
+    z-index:-1;
+    /* in case the video didn't work we gotta make sure poster does */
+    background: url(../video/fedi.png) no-repeat;
+    /* image to be stretched to fit screen*/
+    background-size:cover;
+}
+
+#home-overlay {
+    /* 0,0,0 are black and 0.8 is opacity of black*/
+    background-color : rgba(0,0,0,0.8);
+    /* make sure the color cover all the section */
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/*Parent*/
+/* To put the content in the center of home section, we will display table method for the parent
+ and table cell for the child */
+#home-content{
+    /* to take 100% twl w 3arth */
+    width : 100%;
+    height : 100%;
+    display: table;    
+}
+/*child*/
+#home-content-inner {
+    display : table-cell ;
+    vertical-align : middle;
+}
+    
+/* Play with Heading*/
+/* to apply all on the h1 that exist in home-heading*/
+#home-heading h1 {
+    color: white;
+    font-size : 65px;
+    font-weight: 100;
+    /*takes away margin if any exist*/
+    margin : 0;
+    /* make it look like a block*/
+    display : inline-block;
+    font-family: 'Bitter', serif;
+}
+
+/* acces to span */
+#home-heading h1 span {
+    color: rgb(185, 6, 6);
+    font-weight:500;
+}
+
+#home-text p {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+    /*Customize margin : margin : top right bottom left*/
+    margin: 8px 0 30px 0;
+    font-family: 'Livvic', sans-serif;
+}
+
+/*===================
+      Buttons    
+ ==================*/
+
+.btn-general {
+    font-family : 'Bitter', sans-serif;
+    border-radius:28px;
+    font-size:18px;
+    margin: 0 6px;
+    /*padding : top right bottom left */
+    padding: 12px 46px 12px 46px;
+    /*CSS transitions allows you to change property values smoothly, over a given duration*/
+    /* our transition are(hover and focus) and it will fill the box with color after 5s*/
+    transition : all .5s; /* all identify that we want all properties to transition*/
+    /*To make work on all browsers*/
+    -webkit-transition : all .5s;
+}
+
+.btn-home {
+color:white;
+border: 1px solid rgb(199, 174, 174);
+}
+
+.btn-home:hover, .btn-home:focus {
+    color:rgb(255, 255, 255);
+    background-color: rgb(121, 14, 14);
+    border : 1px solid rgb(121, 14, 14);
+}
+
+/* =======================
+        Arrow Down 
+==========================*/
+
+#arrow-down {  
+    /* to put the arrow realtive to the home section ONLY  */
+    position:absolute;
+    left:50%;
+    bottom:20px;
+    color: white;
+    font-size:23px;
+    width: 32px;
+    height:32px;
+    text-align:center;
+    /* To make it perfectly in center {width/2}==>(32/2)*/
+    margin-left: -16px;
+    z-index:1;
+}
+
+#arrow-down:hover, #arrow-down:focus {
+    color:rgb(170, 6, 6);
+}
+
+                                    /* ====================================
+                                          First Part of About Section 
+                                    ======================================*/      
+
+/* ====================================
+         1-  Content Box (spacing) 
+======================================*/
+
+.content-box-lg {
+    /* top and bottom 120 and left n right 0*/
+     padding: 120px 0;   
+}
+
+/* ====================================
+        2-   vertical heading 
+======================================*/
+.vertical-heading h5 {
+    color: red;
+    font-size :14px;
+    font-weight:500;
+    text-transform : uppercase;
+    word-spacing : 9px;
+          /* to fit only the box, don't take a lot of invisual space */ 
+    display: inline-block;
+          /*rotation of text, we don't use translateX cuz rotate works more on heading*/
+    transform : rotate(-90deg);
+    -webkit-transform :rotate(-90deg);
+    position:relative;
+    top:60px;
+    left:-5px;
+}
+        
+.vertical-heading h2 {
+    margin : 0 0 0 80px;
+    font-size : 40px;
+    font-weight : 100;   
+    font-family: 'Livvic', sans-serif;
+        /*space between lines*/
+    line-height: 50px;
+}
+
+    /* ====================================
+        Right Section of Paragraph & Img 
+    ======================================*/      
+
+/* Target the first child ( first paragraph )*/
+#about-right p:first-child {
+    margin-bottom: 30px;
+    font-weight: 100;
+    font-size: 19px;
+    font-family: 'Merriweather', serif;
+    /*space between lines*/
+    line-height: 35px;
+}
+
+/* Target the second child (second p ) :nth-child(n) is to choose the number and acces */
+
+#about-right p:nth-child(2) {
+    margin-bottom: 30px;
+    font-weight: 100;
+    font-size: 19px;
+    font-family: 'Merriweather', serif;
+    /*space between lines*/
+    line-height: 35px;
+}
+
+
+/*to create space between picture and paragraph*/
+#about-bottom {
+    margin-top :60px;
+}
+
+#about-bottom img{ 
+    /*to make sure it stay always in the center*/
+    margin : 0 auto;
+    height: 400px;
+    width: 1100px;
+}
+
+                               /* ====================================
+                                        Second Part of About Section 
+                                 ======================================*/      
+                                    
+#about-02{
+    background-color: #f4f4f4;    
+}
+
+.content-box-md{
+    /*Created space in the box, on top of cards and under cards*/
+    padding: 100px 0px;
+}
+
+                          
+/* ====================================
+        The Cards from outside
+======================================*/
+
+.about-item{
+    background-color: white;
+    /*For internal spaces*/
+    padding:80px 30px ;
+    /* to add some Box shadow: horizantal vertical blur value shadow color*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ====================================
+            The Icons
+======================================*/                     
+
+.about-item i {
+    font-size: 30px;
+    /*To delete extra space from icons*/
+    margin: 0;
+}
+                          
+/* ====================================
+            The Headers
+======================================*/      
+
+.about-item h3{
+    font-size: 25px;
+    /*To set space under the header*/
+    margin-bottom: 20px;
+}
+                          
+/* ====================================
+                The hr
+======================================*/ 
+
+.about-item hr {
+    width: 45px;
+    height: 3px;
+    background-color: rgb(236, 46, 46);
+    margin : 0 auto;
+    border:none ;
+}
+                           
+/* ====================================
+            The paragraphe
+======================================*/ 
+
+.about-item p {
+    margin-top: 20px ;
+    font-family: 'Noto Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 7, 7);
+}
+
+/* ============================================================
+    Hover State (When passing or selecting cards cahnge color)
+==============================================================*/ 
+
+.about-item:hover {
+background-color: rgb(165, 10, 10);
+color:rgb(255, 255, 255);
+}
+
+.about-item:hover p, .about-item:focus p{
+    color:rgba(255, 255, 255, 0.8);
+}
+.about-item:hover hr{
+    background-color: rgb(226, 140, 140);
+}
+/*Make icons move up*/
+.about-item:hover i {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+}
+/* ====================================
+        Smooth Transition
+======================================*/   
+.about-item,
+.about-item i,
+.about-item hr {
+    transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+}
+
+
+                               /* ====================================
+                                        First Part of Team Section 
+                                 ======================================*/      
+  
+/* ====================================
+                Team
+======================================*/  
+#team-left .vertical-heading{
+    min-height: 160px; /*Create space between heading and paragraph*/
+}
+
+#team-left p {
+    color: black;
+    text-align: left;
+    font-size: 19px;
+    padding: 12px 0 0 25px;
+}
+.team-member {
+    /*put some space between images*/
+    margin:10px;
+    position: relative;
+}
+
+.team-member-overlay{
+    background-color: rgba(33,34,38,0.9);
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;    /*Hide the Overlay*/
+    transition: all 300ms linear; /*linear means kima mloul kima mlkher*/
+    -webkit-transition: all 300ms linear;
+}
+
+.team-member-info{
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+}
+
+.team-member-info h6{
+    color:rgb(212, 73, 73);
+    font-size: 16px;
+    margin: 0;     
+}
+
+.team-member-info p{
+    color:white;
+}
+
+/* =======================================
+        Show overlay when mouse hover
+=========================================*/  
+
+.team-member:hover .team-member-overlay  {
+    opacity: 1;
+}
+
+/* =======================================
+                Social Icons
+=========================================*/  
+
+/*Select all the ul elements that has social List*/
+ul.social-list{
+    padding: 0;
+    margin-top: 20px;
+}
+
+/*You select li which are inside ul with class social-list*/
+ul.social-list li {
+    display: inline-block;
+    padding: 0;
+}
+
+ul.social-list li a {
+    border: 1px solid white;
+    width: 35px;
+    height: 35px;
+    display: inline-block; /* So he can set the width and height*/
+    line-height: 35px; /*To set the icons in the middle of the boxes*/
+    color: rgb(255, 255, 255);
+    border-radius: 40%; /*to make the inline block circle almost*/
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear; /*transition on button*/
+}
+/*We are selecting only Facebook and applying the hover effect*/
+ul.social-list li:nth-child(1) a:hover{
+    background: #3b5993 ;
+    border-color: transparent; /*So that the border dispair*/
+}
+
+/*We are selecting only Youtube and applying the hover effect*/
+ul.social-list li:nth-child(2) a:hover{
+    background: red ;
+    border-color: transparent; /*So that the border dispair*/
+}
+
+/*We are selecting only Google and applying the hover effect*/
+ul.social-list li:nth-child(3) a:hover{
+    background: #eb3434 ;
+    border-color: transparent; /*So that the border dispair*/
+}
+
+/* ======================================================================
+            Sliders Buttons << >> To manipulate Prec and Succ Arrows
+=========================================================================*/  
+/*select all calsses that containts owl-*/
+.owl-theme .owl-nav [class*=owl-]{
+    color: grey;
+    font-size: 40px;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background: none;
+    color: grey;
+}
+
+/* =======================================
+                Progress Bar
+=========================================*/  
+
+.skill {
+    color: rgb(34, 34, 34);
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+.skill h4{
+    line-height: 62px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 19px;
+    padding-left:5px ;
+       
+}
+
+.progress{ /*background color of progress bar*/
+    height: 20px;
+    border-radius: 0;
+    background: #efefef;
+    overflow: visible;
+}
+
+.progress-bar{ /*Progress bar color*/
+    background: rgb(202, 43, 43);
+    position: relative;
+    overflow: visible;
+}
+
+.progress-bar span{
+    font-size: 11px;
+    font-weight: 100 ;
+    font-family: "Open Sans", sans-serif;
+    background: black;
+    padding: 3px;
+    position: absolute;
+    left: 97%;
+    top: -45px;
+}
+
+/*To create small arrow under the span*/
+.progress-bar span:before{ /* ::before creates a pseudo-element that is the first child of the selected element*/
+    content: "";
+    border-top: 8px solid black;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    position: absolute;
+    bottom :-8px;
+    left:23%;
+}
+
+/* =======================================
+            Statement Section
+=========================================*/  
+
+#statement{
+    background: url(../img/tech/try.jpg) no-repeat fixed center;
+    background-size:cover;
+}
+
+#statement .content-box-lg{
+    background: rgba(0,0,0,0.5);
+}
+
+#tech-statement h3{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+#tech-statement p{
+    font-size: 20px;
+    color: rgb(247, 33, 33);
+    font-family: 'Playfair Display', serif;
+    margin-top:  8px;
+}   
+
+/* =======================================
+        Services Section Part 01
+=========================================*/  
+
+/* ===============
+        Header
+==================*/  
+
+.horizantal-heading{
+    margin-bottom: 80px;
+}
+
+.horizantal-heading h5{
+    font-size: 16px;
+    color:red;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.horizantal-heading h2{
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 45px;
+    margin: 0;
+}
+
+/* ===============
+        Image
+==================*/  
+
+#services-01 img {
+    margin: 60px 0;
+    
+}
+
+/* ===============
+    Service List
+==================*/  
+
+.service{
+    margin: 35px 0;
+
+}
+
+.service .icon{
+    font-size: 35px;
+    color: rgb(32, 30, 30);
+    margin: 0;   
+    transition: all 400ms linear ; 
+    -webkit-transition: all 400ms linear;
+}
+
+.service:hover .icon{
+    color: rgb(182, 2, 2);    
+    transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+}
+
+.service h5{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(182, 2, 2);    
+    margin: 0 0 6px 0;
+}
+
+.service:hover h5{
+    color:rgb(59, 49, 49);
+}
+
+.service h4{
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+.service p{
+    font-size:17px ;
+    line-height: normal;
+}
+
+/* =======================================
+        Services Section Part 02
+=========================================*/  
+
+/* ========================
+        Responsive Tabs
+===========================*/  
+#services-02{
+    background: #f4f4f4;
+}
+
+#services-tabs ul{
+    margin-bottom: 40px;
+}
+
+#services-tabs ul li{
+    padding: 5px 30px;
+}
+
+#services-tabs ul li a {
+    font-family : "Open Sans", sans-serif;
+    font-size: 15px;
+    color: #212226;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0;
+    text-decoration: none; /*to remove underline of link*/
+}
+
+/* ==========================
+        Tab active State
+=============================*/  
+
+#services-tabs ul li.r-tabs-state-active a{ /*r-tabs-state-active is class in tab responsive to show it is active*/
+    color: rgb(182, 2, 2); /*Color when active is red*/
+    font-weight: 700; /*make it bold*/
+    border-bottom: 3px solid rgb(182, 2, 2); /*Underline it with red*/
+    padding-bottom: 5px;/*space between border(underline) and text*/
+    transition: border-color 300ms linear;
+    -webkit-transition: border-color 300ms linear;
+}
+
+/* ==========================
+        Content of Tabs
+=============================*/ 
+
+/* ========
+    Image
+===========*/
+
+.service-tab img{
+    width: 100%;
+    margin: 0 auto; /*To center an element*/
+}
+
+/* =========
+    Content
+===========*/
+.service-tab .tab-bg{
+    background: #fff;
+    padding:50px 30px ; /*Inner space*/
+    min-height: 380px; /*To make size of content equal to the size off img*/
+}
+
+/*Remove space between image on left and content on the right*/
+
+.service-tab .col-md-6{
+    padding: 0; 
+}
+
+.service-tab h2{/*Style the numbers*/
+    font-size: 40px;
+    color: #bbb;
+    font-weight: 100;
+}
+
+.service-tab h3{/*Style the titles*/
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.service-tab p{/*style pargraph*/
+    font-size:17px ;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.btn-red{ /*Styling the Get Touch button*/
+    color:white;
+    border :1px solid #b61601;
+    background: #b61601;
+}
+
+.btn-red:hover, .btn-red:focus{
+    color: #fff;
+    background-color: rgb(39, 38, 38);
+    border:1px solid rgb(199, 199, 199);
+}
+
+/* =========================================
+                Portfolio
+============================================ */
+
+#portfolio{
+    padding-bottom: 160px;
+}
+
+#portfolio .vertical-heading {
+    margin-bottom:50px;
+}
+
+/*no gutters will make us remove the bootstrap default paddings*/
+.row.no-gutters [class*=col-]{ /*select all classes that had col- value*/
+    padding: 0;
+}
+
+
+/* ===============
+        Filters  
+==================*/  
+
+#isotope-filters {
+    margin-bottom: 10px;
+    padding: 20px 25px 20px 0;
+}
+
+#isotope-filters button {
+    font-family : "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-right: 30px;
+    outline: 0;
+}
+
+#isotope-filters button span {
+    display: block;
+    padding-bottom: 5px;    
+    -webkit-transition: border-color .4s ease-in-out;    
+    transition: border-color .4s ease-in-out;
+    
+}
+
+#isotope-filters button.active span{
+    color: darkred;
+    border-bottom: 3px solid  darkred ;
+} 
+
+/* ===============
+    Zoom Effect
+==================*/  
+
+.portfolio-item img {
+    width: 80%;
+    height: auto; /* Calculated by the browser */
+}
+
+.portfolio-item:hover img {
+    -webkit-transform: scale(1.09);
+    transform: scale(1.09); /*To zoom in u have to be >1.1 and zoom out < 0.9*/
+    transition: transform .4s ease; /*to set the transform transition in ease*/
+}
+
+/* ========================
+     Img Overlay Effect 
+==========================*/  
+
+.portfolio-item{
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 58px 0 0 ;
+    background: rgba(14,14,17,0.9);
+    cursor: zoom-in; /*to show user small loop to tell them there is smthg to zoom in*/
+    opacity: 0; /*to hide the overlay */
+    transition: all 0.5s ease; 
+
+}
+
+/* ========================
+     Item details Effect 
+==========================*/  
+
+.portfolio-item-details{
+    width: 100%; /* to take full width of their parent*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);    
+    transform: translateY(-50%);
+}
+
+.portfolio-item-details h3{
+    color:#e50e0e;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+    padding: 0 6px 0 0;
+    -webkit-transform: translateY(-20%);    
+    transform: translateY(-20%);
+        
+    
+}
+
+.portfolio-item-details span { /* bech ta3ml zouz border (5tout) taht esm*/
+    display: inline-block;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    height: 6px;
+    width: 40px;
+    margin-bottom: 1px;
+
+}
+
+.portfolio-item-details p { 
+    font-size: 17px;
+    color:antiquewhite;
+    text-transform: capitalize;
+    margin: 0;
+    padding-top: 40px;
+    -webkit-transform: translateY(-20%);    
+    transform: translateY(-20%);
+
+}
+
+
+/* =============================
+    Show overlay on mouse hover 
+================================*/  
+
+.portfolio-item:hover .portfolio-item-details h3{
+    -webkit-transform: translateY(-7%);    
+    transform: translateY(-7%);
+    transition: all 0.8s; 
+    
+}
+
+
+.portfolio-item:hover .portfolio-item-details p{
+    -webkit-transform: translateY(-40%);    
+    transform: translateY(-40%);
+    transition: all 0.8s; 
+
+}
+
+
+.portfolio-item:hover .portfolio-item-overlay{
+    opacity: 0.9; /*To show the overlay again*/
+}
+
+
+/* =============================
+        What Our Clients Say 
+================================*/  
+
+.author img {
+    width: 70px;
+    height: 90px;
+}
+
+#testimonials{
+    background: #f4f4f4;
+    padding-bottom: 45px;
+    overflow: visible /*So the card can be visible without getting cut*/
+}
+
+#testimonials .vertical-heading{
+    padding: 80px 0;
+    margin-bottom: 50px;
+}
+
+#testimonial-slider{
+    background: #ab5c16;
+    top:-120px;
+    border-radius: 6px;
+}
+
+.testimonial{
+    padding: 20px 45px 0 45px;
+    color: #fffcfc;
+}
+
+.testimonial h3{
+    font-size: 32px;
+    line-height: 80px;
+}
+
+.testimonial .stars{
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    color: yellow;
+}
+
+.testimonial p{
+    line-height: normal;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family : "Open Sans", sans-serif;
+}
+
+.author-name-des {
+    width: 106px; /*size of the box putting*/
+    margin-top: 25px;
+    text-align: left; /*Alignment % à width */
+    
+}
+
+.author-name-des p {
+    margin: 0;
+}
+
+.testimonial row {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+                Pricing
+============================================ */
+
+.pricing-table{
+    /*box-shadow: hoizantal, vertical, blur, spread, color*/
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.1); 
+    border-radius: 6px;
+    padding: 32px 21px;
+}
+
+.pricing-table:hover{
+    background: #d28037;
+    transition: all 400ms linear;
+}
+
+.type h4{
+    color:#e50e0e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.price {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 24px;
+}
+
+.price h2{
+    font-family : "Open Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0 0 0 4px;
+    padding-top: 14px;
+    padding-right:  5px;
+    position: relative;    
+}
+
+.price h2 span{
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.price h2 span.dinar{
+    font-size: 18px;
+    font-weight: 100;
+    position: absolute;
+    left: -20px;
+    top:5px;
+}
+
+.price h2 span.month{
+    font-size: 11px;
+    font-weight: 400;
+    position: absolute;
+    left: 5px;
+    top: 70px;
+}
+
+
+.price p{
+    line-height: normal;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    
+}
+
+.package{
+    list-style: none; /*to remove the dots */
+    padding: 20px 0;
+    
+}
+
+.package li {
+    font-family : "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.package li i{
+    width: 24px;
+}
+
+.btn-price{
+    width: 96%;
+    color: white;
+    border: 1px solid ;
+    background: firebrick;
+}
+
+.pricing-table:hover h4,
+.pricing-table:hover h2{
+    color:beige;
+    font-weight: 400;
+}
+
+.pricing-table:hover .package{
+    font-size: 20px;
+    color: white;
+}
+
+.pricing-table:hover p{
+    font-size: 20px;
+    color:antiquewhite
+}
+
+.pricing-table:hover .btn-price{
+    background: white;
+    color: darkslategrey;
+    border: 1px solid white;
+}
+
+.pricing-table .btn-price:hover,
+.pricing-table .btn-price:focus{
+    background: #212226;
+    color: #fff;
+    border: 1px solid #212226;
+}
+
+.black{
+    background: #212226;
+    color: white;
+}
+
+.pricing-table.black .type h4{
+    color: goldenrod;
+}
+
+.btn-white{
+    color: #212226;
+    border: 1px solid white;
+    background-color: white;
+    width: 96%;
+}
+
+.btn-white:hover,
+.btn-white:focus{
+    color: white;
+    background-color:#212226 ;
+    border: 1px solid #212226;
+}
+
+
+/* =========================================
+                Stats
+============================================ */
+
+
+#stats{
+    background: url("../img/stats/Stat05.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+
+#stats .content-box-md{
+    background: rgba(0,0,0,0.8);
+}
+
+#stats .vertical-heading h2{
+    color: white;
+}
+
+#stats .vertical-heading{
+    margin-bottom: 50px;
+}
+#stats .vertical-heading h5{
+    color: gold;
+}
+.stats-item{
+    background: rgba(61,86,86,0.6);
+    border-radius: 4px;
+    min-height: 200px; /*bech yo93od min height dima mrigel ala devices okhrin*/
+    padding: 40px 10px 40px 0;
+}
+
+.stats-item i {
+    font-size: 45px;
+    color: #f4c613;
+    margin: 0 0 6px 0;
+}
+
+.stats-item h3 {
+    font-size: 32px;
+    color: #fff;
+    margin: 5px 0 5px 0;
+    font-family: 'Bitter', serif;
+}
+
+.stats-item p {
+    color: #fff;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-size: 16px;
+}
+
+.stats-item:hover{
+    background: #f4c613;
+    transition: all 400ms linear;
+}
+
+.stats-item:hover i {
+    transform: translateY(-20px);
+    color: #212226;
+    transition: all 400ms linear;
+}
+
+/* =======================================
+                Clients
+=========================================*/  
+
+.content-box-sm{
+    padding: 100px 0;
+}
+
+#clients .horizantal-heading {
+    margin-bottom: 40px;
+}
+
+#clients-list{
+    padding: 45px 0 0 0;
+}
+
+.client{
+    padding: 0 10px;
+    max-width: 150px;
+    margin: 0 auto;
+    line-height: 100px; /* toul mta les imgs */
+}
+
+.client img {
+    display: inline-block !important ; /*to make it aligned verticaly (mestwiin)
+    /*!important khater owl-carousel yaml par défaut display bloc*/
+}
+
+/* =======================================
+                Blog
+=========================================*/  
+
+#blog{ /*to set the bg of blog section*/
+    background: #f4f4f4;
+}
+
+#blog-left p{
+    font-family: serif;
+    margin: 25px 0;
+}
+
+#blog-btn a{
+    margin: 0;
+}
+
+.blog-post {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+
+.blog-post h4{
+    line-height: 40px;
+    margin : 0;
+}
+
+.blog-post >p { /* to select only the first paragraph of the diff parg that exists */
+    line-height: 24px;
+    margin: 0;
+    font-weight: 300;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.blog-post a {
+    display: inline-block;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-family: 'Bitter', serif;
+    color:firebrick ;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none; /*béch ynahi kl lien éli taht a */
+}
+
+.blog-post a:hover{
+    color: #212226;
+    transition: all 400ms linear;
+} 
+
+.blog-post .post-meta{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.blog-post .post-meta p {
+    font-size: 11px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* =======================================
+                Contact US
+=========================================*/  
+
+/* ===============
+    Contact Left
+==================*/  
+
+.contact-left p{
+    margin:25px 0 20px 0 ;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;    
+}
+
+.office ul{
+    list-style: none; /* to remove the dots */
+    padding: 0;
+}
+
+.office-details li{
+    font-family: 'Bitter', serif;
+    margin-top: 12px;
+    display: flex; /* specify the length of the text relative to the icon*/
+}
+
+
+.office-details li i{
+    font-size: 20px;
+    width: 45px; /*get some space on the right side */
+    color: #b61601;
+}
+
+ul.social-list li a  { /* to select social media icons*/
+    color: #ffffff;
+    border:1px solid #f4f5f7;
+    text-align: center;
+}
+
+
+ul.social-list li a:hover{
+    color:antiquewhite;
+    border-color: transparent;
+} 
+
+
+/* ===============
+    Contact Right
+==================*/  
+
+#contact-right{
+    padding: 25px 30px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+#contact-right h4 {
+    font-size: 24px;
+}
+
+#contact-right p {
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 25px;
+}
+
+form input.form-control {
+    font-family: 'PT Sans', sans-serif;
+    padding: 10px 15px;
+    font-size: 12px;
+    line-height: 24px;
+
+}
+
+form textarea.form-control {
+    min-height: 164px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+
+/* =======================================
+                Google Map
+=========================================*/  
+/*
+#map{
+    height:100% ;
+}
+*/
+
+/* =======================================
+                Footer
+=========================================*/  
+footer{
+    background: #212226;
+    padding: 30px;
+}
+
+footer p {
+    color : #fff;
+    line-height: 20px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+footer span {
+    font-family: 'PT Sans', sans-serif;
+    color: #b61601;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* =========================================
+                Navigation
+============================================ */
+
+ul.navbar-nav > li > a {
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 20px;
+}
+
+ul.navbar-nav>li> a:hover,
+ul.navbar-nav > li > a:focus{
+    background: none;
+    color: red;
+
+}
+
+.ourbar a {
+    color:white;
+    margin:10px ;
+}
+
+/* ================================
+         Back to Top Button
+=================================== */
+
+.btn-back-to-top{
+	position : fixed;
+	bottom:20px;
+    right:20px;
+    font-size: 15px;
+    padding: 3px 10px ;
+    display: none;
+}
+
+
+                                    /* =================================
+                                                Animation Delay 
+                                    ====================================*/
+
+#home-heading-1{
+    animation-duration: 1.5s; /* how long it takes to complete */
+    animation-delay: 1s; /* delay of start of animation*/
+}
+
+#home-heading-2{
+    animation-duration: 1.5s; /* how long it takes to complete */
+    animation-delay: 1s; /* delay of start of animation*/  
+}
+
+#home-text {
+    animation-duration: 1.5s; 
+    animation-delay: 2s;
+}
+
+#home-btn{
+    animation-duration: 1.5s; 
+    animation-delay: 2.5s;
+}
+
+#arrow-down i {
+    animation-duration: 1.5s; 
+    animation-delay: 3s;
+}

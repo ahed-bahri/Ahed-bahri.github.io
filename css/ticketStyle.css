@@ -1,0 +1,43 @@
+.left-side{
+    width: 400px;
+    height: 500px;
+    margin-top: 8px;
+    padding-top: 40px;
+    padding-left: 120px;
+}
+
+.right-side{
+    margin-top: 60px;
+}
+
+.Total{
+    background-color: rgba(228, 228, 228, 0.904);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-left:110px;
+}
+
+h3{
+    padding-bottom: 20px;
+    color: rgb(153, 4, 4);
+    padding-left: 90px;
+    font-family: 'Bitter', serif;
+}
+
+
+label{
+    font-weight: 500;
+}
+
+
+.btn{
+    margin-top: 20px;
+    width: 180px;
+    margin-left: 30px;
+    font-weight: 500;
+    font-family: 'Bitter', serif;
+}
+body {
+    background-image: url("../img/ticket/ticket.jpg");
+}

@@ -1,0 +1,677 @@
+                                    /* ================================
+                                            Bootstrap 4 Media Queries
+                                    =================================== */
+
+/* FOR large devices (Desktops and large Laptops)*/
+@media (min-width:1200px){
+    .about-item p{
+        min-height:120px ;
+    }
+}
+
+/* Medium devices (landscape tablets & medium dsktops) */
+
+@media(min-width:992px)  and (max-width:1199px){
+    #services-tabs .tab-bg{
+        padding: 16px 30px;
+        min-height:320px ;
+    }
+    .service-tab p {
+        line-height: 20px;
+    }
+    .blog-post{
+        min-height: 300px;
+    }
+    .about-item p{
+        padding: 10px 3px;
+        min-height:55px ;
+    }
+}
+
+/* small devices (small Tabletes & small desktops) */
+@media(min-width:768px)  and (max-width:991px){
+
+    #home-heading h1{
+        font-size:41px;
+    }
+
+    #home-text p {
+        font-size: 15px;
+    }
+
+    .btn-general{
+        padding: 8px 35px 8px 35px;
+        font-size: 10px;
+    }
+
+    .vertical-heading h2{
+        font-size: 30px;
+    }
+    
+    /* Services 02 */
+    #services-tabs .tab-bg{
+        padding: 16px 30px;
+        min-height:50px ;
+    }
+    .tab-bg h3 {
+        font-size: 15px;
+    }
+    .service-tab p {
+        line-height: 15px;
+        font-size: 13px;
+        padding-bottom:5px;
+    }
+    /* Services nav bar */
+    .r-tabs-accordion-title{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .r-tabs-accordion-title a {
+        font-family : "Open Sans", sans-serif;
+        font-size: 15px;
+        color: #212226;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0;
+        text-decoration: none; /*to remove underline of link*/
+    }
+                                /* ==========================
+                                        Tab active State
+                                =============================*/  
+
+    .r-tabs-accordion-title.r-tabs-state-active a{ /*r-tabs-state-active is class in tab responsive to show it is active*/
+        color: rgb(182, 2, 2); /*Color when active is red*/
+        font-weight: 700; /*make it bold*/
+        border-bottom: 3px solid rgb(182, 2, 2); /*Underline it with red*/
+        padding-bottom: 5px;/*space between border(underline) and text*/
+        transition: border-color 300ms linear;
+        -webkit-transition: border-color 300ms linear;
+    }
+
+    .about-item i{
+        font-size: 25px;
+    }
+    .about-item h3{
+        font-size: 25px;
+    }
+    .about-item p{
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+    .about-item {
+        padding-top: 30px;
+        min-height:450px ;
+
+    }
+
+    .pricing-table .price p{
+        margin: 0 0 0 6px;
+        font-size: 15px;
+    }
+
+    .pricing-table .price h2{
+        margin: 0px 6px 6px 6px;
+        font-size: 25px;
+    }
+    
+    .blog-post{
+        min-height: 300px;
+    }
+    .blog-post h4{
+        font-size: 16px;
+    }
+   .blog-post p{
+        line-height: 18px;
+        font-size: 15px;
+    }
+    .blog-post img {
+        margin-right: 15px;
+    }
+    .post-meta p {
+        padding-top:27px ;
+    }
+    .stats-item{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        min-height: 200px;
+    }
+
+    .stats-item h3{
+        font-size: 20px;
+    }
+    
+    .stats-item p{
+        font-size: 15px;
+    }
+    .stats-item i{
+        font-size: 50px;
+    }
+    .testimonial h3{
+       font-size: 20px;
+    }
+
+    .author img {
+        width: 80px !important;
+    }
+
+    .voila h2{
+        font-size: 25px;
+    }
+}
+/* small devices (phones) */
+@media(max-width:767px) {
+                                /* ==========================
+                                            Home
+                                =============================*/  
+    #home-heading h1{
+        font-size:50px;
+    }
+
+    #home-text p {
+        font-size: 18px;
+        line-height: 18px;
+        margin:8px 2px 30px 2px;
+    }
+
+    .btn-general{
+        padding: 8px 25px 8px 25px;
+        font-size: 15px;
+    }
+
+                                    /* ==========================
+                                            About Part 1
+                                    =============================*/  
+    .content-box-lg {
+        padding: 90px 0;
+    }
+
+    .vertical-heading{
+        text-align: center;
+    }
+
+    .vertical-heading h5{
+        transform: rotate(0deg);
+        display: block;
+        position: static; /* not effected with top , right bottom value*/
+        margin-bottom: 15px;
+    }
+
+    .vertical-heading h2{
+        font-size: 29px;
+        line-height: normal;
+        margin: 0;
+    }
+
+    #about-left  {
+        margin-bottom: 50px;
+    }
+
+    #about-right{
+        text-align: center;
+    }
+
+
+                                    /* ==========================
+                                            About Part 2
+                                    =============================*/  
+
+
+    .content-box-md{
+        padding: 80px 0;
+    }
+
+    .about-item{
+        padding: 55px 30px;
+        margin-bottom: 35px;
+    }
+
+    .about-item i {
+        font-size: 30px;
+    }
+    
+    .about-item h3 {
+        font-size: 18px;
+    }
+
+    #team-left .vertical-heading{
+        min-height: 130px;
+    }
+
+
+    .skill h4{
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    #tech-statement h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+
+                                    /* ==========================
+                                            Service Part 1
+                                    =============================*/  
+    .horizantal-heading {
+        margin-bottom: 40px;
+
+    }
+    .horizantal-heading h2 {
+        font-size: 30px;
+    }
+
+    .service{
+        text-align: center;
+    }
+    /* Services nav bar */
+    .r-tabs-accordion-title{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .r-tabs-accordion-title a {
+        font-family : "Open Sans", sans-serif;
+        font-size: 15px;
+        color: #212226;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0;
+        text-decoration: none; /*to remove underline of link*/
+    }
+                                /* ==========================
+                                        Tab active State
+                                =============================*/  
+
+    .r-tabs-accordion-title.r-tabs-state-active a{ /*r-tabs-state-active is class in tab responsive to show it is active*/
+        color: rgb(182, 2, 2); /*Color when active is red*/
+        font-weight: 700; /*make it bold*/
+        border-bottom: 3px solid rgb(182, 2, 2); /*Underline it with red*/
+        padding-bottom: 5px;/*space between border(underline) and text*/
+        transition: border-color 300ms linear;
+        -webkit-transition: border-color 300ms linear;
+    }   
+
+    #services-tabs .tab-bg {
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    #services-tabs h2 {
+        font-size: 40px;
+    }
+    #services-tabs h3 {
+        font-size: 28px;
+    }
+
+
+                                /* ==========================
+                                            Portfolio
+                                =============================*/  
+
+    #portfolio{
+        padding-bottom: 0;
+    }
+
+    #isotope-filters button{
+        padding-right: 15px;
+    }
+
+                                /* ==========================
+                                            Clients
+                                =============================*/  
+
+
+    #testimonials{
+        padding-top: 45px;
+    }
+    #testimonials-slider{
+        top:0;
+    }
+    #testimonials .vertical-heading{
+        padding: 0;
+    }
+    .testimonial .row{
+        margin: 0;
+    }
+    .testimonial h3{
+        font-size: 20px;
+    }
+    .testimonial .stars{
+        font-size: 16px;
+    }
+    .author img {
+        width: 80px !important;
+    }
+
+    #testimonials .vertical-heading h2{
+        padding-bottom: 100px;
+        font-size: 30px;
+    }
+
+                                /* ==========================
+                                            price
+                                =============================*/  
+    .price h2 {
+        padding-bottom : 40px;
+    }
+
+
+                                /* ==========================
+                                            Stats
+                                =============================*/  
+
+    .stats-item {
+        margin-bottom: 20px;
+        padding:35px 5px 1px 5px;
+    }
+    .stats-item i {
+        font-size: 30px;
+    }
+
+    .stats-item h3{
+        font-size: 24px;
+    }
+
+
+                                /* ==========================
+                                            Blog
+                                =============================*/  
+
+    #blog-left{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .blog-post{
+        margin-bottom: 25px;
+    }
+
+                                /* ==========================
+                                            Contact
+                                =============================*/  
+    .office {
+        margin-bottom: 40px;
+    }
+    ul.office-details li {
+        display: block;
+        margin-top:25px;
+    }
+    ul.office-details li i {
+        width: auto;
+        display:block;
+        margin-bottom: 3px;
+    }
+    ul.social-list {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .herego{
+        font-size: 10px;
+    }
+    footer p {
+        font-size: 18px;
+    }
+    footer p span {
+        font-size: 20px;
+    }
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        padding-top: 100px;
+        z-index: 2;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.93);
+
+    }
+    .navbar-collapse ul li a {
+        color: white;
+        font-size: 20px;
+        line-height: 35px;
+        padding-top: 20px;
+    }
+    .navbar-collapse ul li a:hover,
+    .navbar-collapse ul li a:focus {
+        transition: all 200ms linear;
+        display: inline-block;
+        font-weight: 700;
+        transition: all 200ms linear;
+    }
+
+
+    /* OVERLAY */
+    .portfolio-item-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 130px 0 0 ;
+        background: rgba(14,14,17,0.9);
+        cursor: zoom-in; /*to show user small loop to tell them there is smthg to zoom in*/
+        opacity: 0; /*to hide the overlay */
+        transition: all 0.5s ease; 
+    
+    }
+
+
+    .portfolio-item:hover .portfolio-item-overlay{
+        opacity: 0.9; /*To show the overlay again*/
+    }
+    
+}
+
+/* extra small devices (phones) */
+@media(max-width:480px) {
+                                                    /* ==========================
+                                                                Home
+                                                    =============================*/  
+
+    #home-heading h1{
+        font-size: 45px;
+    }
+
+    #home-text p {
+        font-size: 15px;
+        line-height: 18px;
+        margin:8px 10px 25px 10px;
+    }
+
+    .btn-general{
+        padding: 8px 25px 8px 25px;
+        font-size: 15px;
+    }
+
+    .vertical-heading h2{
+        font-size: 25px;
+    }
+
+    #about-right p {
+        font-size: 15px;
+    }
+
+    #isotope-filters{
+        text-align: center;
+    }
+    #isotope-filters button {
+        font-size: 10px;
+        padding-right: 14px;
+
+    }
+    .testimonial h3{
+        font-size: 15px;
+        line-height: 15px;
+     }
+ 
+     
+    .testimonial .stars{
+        font-size: 10px;
+    }
+
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        padding-top: 100px;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.93);
+
+    }
+    .navbar-collapse ul li a {
+        color: white;
+        font-size: 20px;
+        line-height: 35px;
+        padding-top: 20px;
+    }
+    .navbar-collapse ul li a:hover,
+    .navbar-collapse ul li a:focus {
+        transition: all 200ms linear;
+        display: inline-block;
+        font-weight: 700;
+        transition: all 200ms linear;
+    }
+
+    #mobile-nav-close-btn{
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: -9px;
+        right: 13px;
+        transition: .3s;
+    }
+    
+    #mobile-nav-close-btn:hover,
+    #mobile-nav-close-btn:focus{
+        color: red;
+    }
+        /* OVERLAY */
+        .portfolio-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 80px 0 0 ;
+            background: rgba(14,14,17,0.9);
+            cursor: zoom-in; /*to show user small loop to tell them there is smthg to zoom in*/
+            opacity: 0; /*to hide the overlay */
+            transition: all 0.5s ease; 
+        
+        }
+    
+    
+        .portfolio-item:hover .portfolio-item-overlay{
+            opacity: 0.9; /*To show the overlay again*/
+        }
+}
+
+@media(max-width:320px) {
+
+    .testimonial h3{
+        line-height: 16px;
+        padding-left: 20px;
+    }
+ 
+     
+    .testimonial .stars{
+        padding-right: 50px;
+    }
+
+    .testimonial p{
+        text-align: center;
+    }
+
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        padding-top: 100px;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.93);
+
+    }
+    .navbar-collapse ul li a {
+        color: white;
+        font-size: 20px;
+        line-height: 35px;
+        padding-top: 20px;
+    }
+    .navbar-collapse ul li a:hover,
+    .navbar-collapse ul li a:focus {
+        transition: all 200ms linear;
+        display: inline-block;
+        font-weight: 700;
+        transition: all 200ms linear;
+    }
+
+        /* OVERLAY */
+        .portfolio-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 50px 0 0 ;
+            background: rgba(14,14,17,0.9);
+            cursor: zoom-in; /*to show user small loop to tell them there is smthg to zoom in*/
+            opacity: 0; /*to hide the overlay */
+            transition: all 0.5s ease; 
+        
+        }
+    
+    
+        .portfolio-item:hover .portfolio-item-overlay{
+            opacity: 0.9; /*To show the overlay again*/
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
